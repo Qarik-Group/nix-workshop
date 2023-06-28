@@ -1,8 +1,5 @@
+{ pkgs, lib, stdenv, ... }:
 let 
-  pkgs = import <nixpkgs> {};
-  lib = pkgs.lib;
-  stdenv = pkgs.stdenv;
-
   ncursesStatic = pkgs.ncurses.overrideAttrs (oldAttrs: rec {
     enableStatic = true;
 
